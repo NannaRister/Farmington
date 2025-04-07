@@ -41,11 +41,11 @@ TagManager:
   - name: Ground
     uniqueID: 1892940999
     locked: 0
-  - name: Hard Objects
-    uniqueID: 2120835831
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GrowBlock
+    uniqueID: 3878355239
     locked: 0
   - name: Player
     uniqueID: 3573919833
