@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
@@ -90,46 +91,38 @@ public class PlayerController : MonoBehaviour
             UIController.instance.SwitchTool((int)currentTool); //nu kalder vi bare vores singleton instance fra UIcontroller scriptet i stedet 
         }
 
-        if (actionInput.action.WasPressedThisFrame())
-        {
-            UseTool();
-        }
+        //if (actionInput.action.WasPressedThisFrame())
+        //{
+        //    SwitchTool();
+        //}
 
         anim.SetFloat("speed", rb.linearVelocity.magnitude);
 
     }
 
-    void UseTool()
-    {
-        GrowBlock block = null;
+    //void SwitchTool()
+    //{
 
-        block = FindFirstObjectByType<GrowBlock>(); //find objektet der har en grow block script på sig
+    //        switch (currentTool) //skifter imellem mine tools, så jeg fx ikke kan pløje jorden når jeg holder vandkanden
+    //        {
+    //            case ToolType.plough:
 
-        //block.PloughSoil();
+    //            Debug.Log("Using Plough");
 
-        if (block != null)
-        {
-            switch (currentTool) //skifter imellem mine tools, så jeg fx ikke kan pløje jorden når jeg holder vandkanden
-            {
-                case ToolType.plough:
+    //                break;
 
-                    block.PloughSoil();
+    //            case ToolType.wateringCan:
 
-                    break;
+    //                break;
 
-                case ToolType.wateringCan:
+    //            case ToolType.seeds:
 
-                    break;
+    //                break;
 
-                case ToolType.seeds:
+    //            case ToolType.basket:
 
-                    break;
+    //                break;
 
-                case ToolType.basket:
-
-                    break;
-
-            }
-        }
+    //        }
+    //    }
     }
-}

@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.InputSystem;
+using static PlayerController;
 
 public class FarmTile : MonoBehaviour
 {
     public static FarmTile Instance { get; private set; }
 
     public Tilemap farmTilemap;
+    public TileBase Field; //plough jord
     public TileBase farmTile;
     public TileBase witheredTile; // A tile to show when a crop dies
 
@@ -16,6 +20,7 @@ public class FarmTile : MonoBehaviour
 
     public List<CropEntry> cropDataList;
     public Inventory inventory;
+    public PlayerController playerController;
 
     private Transform playerTransform;
 
@@ -46,17 +51,38 @@ public class FarmTile : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PlantCrop(tilePosition);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E)) 
-        {
-            WaterCrop(tilePosition);
+            if(playerController.currentTool == PlayerController.ToolType.plough)
+            {
+                PloughSoil(tilePosition);
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            HarvestCrop(tilePosition);
+            if(playerController.currentTool == PlayerController.ToolType.seeds)
+            {
+                PlantCrop(tilePosition);
+            }
+        
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) 
+        {
+            if (playerController.currentTool == PlayerController.ToolType.wateringCan)
+            {
+                WaterCrop(tilePosition);
+            }
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (playerController.currentTool == PlayerController.ToolType.basket)
+            {
+                HarvestCrop(tilePosition);
+            }
+            
         }
         // Check if any crops should wither
         CheckForWithering();
@@ -75,6 +101,18 @@ public class FarmTile : MonoBehaviour
         return farmTilemap.WorldToCell(playerFeetPosition);
     }
 
+    void PloughSoil(Vector3Int tilePosition)
+    {
+        TileBase currentTile = farmTilemap.GetTile(tilePosition);
+
+        if (currentTile == farmTile)
+        {
+            farmTilemap.SetTile(tilePosition, Field);
+            Debug.Log("I did change from Farmtile to Field");
+        }
+        
+    }
+
     void PlantCrop(Vector3Int tilePosition)
     {
         TileBase currentTile = farmTilemap.GetTile(tilePosition);
@@ -88,7 +126,7 @@ public class FarmTile : MonoBehaviour
             return;
         }
 
-        if (currentTile == farmTile && !crops.ContainsKey(tilePosition))
+        if (currentTile == Field && !crops.ContainsKey(tilePosition))
         {
             if (inventory.RemoveItem(seedType))
             {
