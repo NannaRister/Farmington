@@ -154,11 +154,11 @@ public class FarmTile : MonoBehaviour
             return;
         }
 
-        if (inventory.selectedItem != "Watering Can")
-        {
-            Debug.Log("You need a watering can to water crops!");
-            return;
-        }
+        //if (inventory.selectedItem != "Watering Can")
+        //{
+        //    Debug.Log("You need a watering can to water crops!");
+        //    return;
+        //}
 
         var cropData = crops[tilePosition];
         //string cropType = cropData.cropType;
@@ -198,7 +198,7 @@ public class FarmTile : MonoBehaviour
             yield break;
         }
 
-        yield return new WaitForSeconds(5f); // Growth delay
+        yield return new WaitForSeconds(15f); // Growth delay
 
         List<TileBase> dryStages = GetCropStages(cropData.cropType);
 
@@ -259,11 +259,11 @@ public class FarmTile : MonoBehaviour
 
     void HarvestCrop(Vector3Int tilePosition)
     {
-        if (inventory.selectedItem != "Basket")
-        {
-            Debug.Log("You need a Basket to harvest!");
-            return;
-        }
+        //if (inventory.selectedItem != "Basket")
+        //{
+        //    Debug.Log("You need a Basket to harvest!");
+        //    return;
+        //}
 
         if (crops.ContainsKey(tilePosition))
         {

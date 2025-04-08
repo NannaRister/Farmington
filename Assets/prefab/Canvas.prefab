@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 354937166297709665}
   - component: {fileID: 3334663564519249334}
   - component: {fileID: 8899021466925639386}
-  - component: {fileID: 2173810139043789979}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -103,22 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2173810139043789979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2805416856419070237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc4e2cbe43e47345b11e0620d759ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 6685122560746104248}
-  cropButtonPrefab: {fileID: 2730141976321064736, guid: dda560b1939756a479c8fa4b671e7d5a, type: 3}
-  cropButtonParent: {fileID: 3707957884380033473}
-  inventory: {fileID: 0}
 --- !u!1 &2983871596371606839
 GameObject:
   m_ObjectHideFlags: 0
