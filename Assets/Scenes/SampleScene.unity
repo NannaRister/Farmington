@@ -40049,26 +40049,26 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e84636f9552c00446bc9e6c4a0e88d01, type: 2}
   - cropName: Strawberry
     growthStages:
-    - {fileID: 11400000, guid: 4f0b69ea07e49ec4ab774ab74021d9d3, type: 2}
-    - {fileID: 11400000, guid: 186cfb68690c32b45b620dac9cc87157, type: 2}
-    - {fileID: 11400000, guid: d6c7433d6e03f2c47b8bb458b1005bd2, type: 2}
-    - {fileID: 11400000, guid: 157993a68e571f24893f749e767e26ba, type: 2}
+    - {fileID: 11400000, guid: ad04f8474b51157459c9480122ac5b12, type: 2}
+    - {fileID: 11400000, guid: 8b75f019ef5ccb74693dcf34cb2a9f04, type: 2}
+    - {fileID: 11400000, guid: 9fb5acc3656617c44920797c2c8c3eb5, type: 2}
+    - {fileID: 11400000, guid: 40ed050dd4317c34287e0aa86597df50, type: 2}
     wateredGrowthStages:
-    - {fileID: 11400000, guid: fc597b6cc0a10c149914979d8ad1d559, type: 2}
-    - {fileID: 11400000, guid: bca91fc99941ed14c9f19a6b1d9825a4, type: 2}
-    - {fileID: 11400000, guid: a959a0ec49808804a9e168c7e9bb5907, type: 2}
-    - {fileID: 11400000, guid: d95e3bbbac40f074299ede11e6f1513f, type: 2}
+    - {fileID: 11400000, guid: e6c06c3f00f013b4da382887caabd816, type: 2}
+    - {fileID: 11400000, guid: ea0b7128f215e944a86807ddf70e6e46, type: 2}
+    - {fileID: 11400000, guid: df08b57e7850b7c4081a4663de6dfb80, type: 2}
+    - {fileID: 11400000, guid: 3e338131992e76f4c8a445a7e7ab3d81, type: 2}
   - cropName: Pumpkin
     growthStages:
-    - {fileID: 11400000, guid: 4f0b69ea07e49ec4ab774ab74021d9d3, type: 2}
-    - {fileID: 11400000, guid: 186cfb68690c32b45b620dac9cc87157, type: 2}
-    - {fileID: 11400000, guid: d6c7433d6e03f2c47b8bb458b1005bd2, type: 2}
-    - {fileID: 11400000, guid: 157993a68e571f24893f749e767e26ba, type: 2}
+    - {fileID: 11400000, guid: 6660b721d8bc18943afbb1c2c899b41a, type: 2}
+    - {fileID: 11400000, guid: 60ca3c8b1fb7d934c95ce22163440fc0, type: 2}
+    - {fileID: 11400000, guid: 44e25666095eaa4479d7f3dc93cdd8c2, type: 2}
+    - {fileID: 11400000, guid: 5429b56960859064ca0b36d649ade224, type: 2}
     wateredGrowthStages:
-    - {fileID: 11400000, guid: fc597b6cc0a10c149914979d8ad1d559, type: 2}
-    - {fileID: 11400000, guid: bca91fc99941ed14c9f19a6b1d9825a4, type: 2}
-    - {fileID: 11400000, guid: a959a0ec49808804a9e168c7e9bb5907, type: 2}
-    - {fileID: 11400000, guid: d95e3bbbac40f074299ede11e6f1513f, type: 2}
+    - {fileID: 11400000, guid: 23ee3ff0dce5bac45bdd94b2ac295e5b, type: 2}
+    - {fileID: 11400000, guid: 6c70fb59c1dcf9a468c1f0f64c264e3c, type: 2}
+    - {fileID: 11400000, guid: f84fe3ae75eecb3439bf25d66a2cf4dc, type: 2}
+    - {fileID: 11400000, guid: db4f0756c54279c4d8de04afe76051ce, type: 2}
   inventory: {fileID: 2064421754}
   playerController: {fileID: 2064421750}
 --- !u!1 &1503238166
@@ -85723,8 +85723,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItems:
   - itemName: Wheat Seeds
-    amount: 33
-    itemSprite: {fileID: -7796942356153490788, guid: fa63d497747bca54791a04b614873014, type: 3}
+    amount: 5
+    itemSprite: {fileID: -3293256711928181663, guid: 0a963cf1c90b3cd45a657d83b97166f8, type: 3}
+  - itemName: Mushroom Seeds
+    amount: 5
+    itemSprite: {fileID: 1352955200029874055, guid: 0a963cf1c90b3cd45a657d83b97166f8, type: 3}
+  - itemName: Pumpkin Seeds
+    amount: 5
+    itemSprite: {fileID: 2899441650435199170, guid: 0a963cf1c90b3cd45a657d83b97166f8, type: 3}
+  - itemName: Strawberry Seeds
+    amount: 5
+    itemSprite: {fileID: 8635903978712429406, guid: 0a963cf1c90b3cd45a657d83b97166f8, type: 3}
   selectedItem: Wheat Seeds
 --- !u!1 &2076668852
 GameObject:
