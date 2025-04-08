@@ -105,31 +105,31 @@ public class PlayerController : MonoBehaviour
 
         block = FindFirstObjectByType<GrowBlock>(); //find objektet der har en grow block script på sig
 
-        block.PloughSoil();
+        //block.PloughSoil();
 
-        //if (block != null)
-        //{
-        //    switch (currentTool) //skifter imellem mine tools, så jeg fx ikke kan pløje jorden når jeg holder vandkanden
-        //    {
-        //        case ToolType.plough:
+        if (block != null)
+        {
+            switch (currentTool) //skifter imellem mine tools, så jeg fx ikke kan pløje jorden når jeg holder vandkanden
+            {
+                case ToolType.plough:
 
-        //            block.PloughSoil();
+                    block.PloughSoil();
 
-        //            break;
+                    break;
 
-        //        case ToolType.wateringCan:
+                case ToolType.wateringCan:
 
-        //            break;
+                    break;
 
-        //        case ToolType.seeds:
+                case ToolType.seeds:
 
-        //            break;
+                    break;
 
-        //        case ToolType.basket:
+                case ToolType.basket:
 
-        //            break;
+                    break;
 
-        //    }
-        //}
+            }
+        }
     }
 }
