@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: framerbaleland
+  m_Name: Strawberry wet 1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1981554503771637171, guid: 7a7a6d35bbbbc6242bec12965342e1ff, type: 3}
+  m_Sprite: {fileID: 8860653199168549621, guid: ecdc0aad6b521b34b9443cab31c6fe74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
