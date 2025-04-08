@@ -66,4 +66,6 @@ public class Inventory : MonoBehaviour
             Debug.LogWarning($"Item '{itemName}' not found in inventory.");
         }
     }
+
+
 }
