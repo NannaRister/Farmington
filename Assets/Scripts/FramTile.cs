@@ -63,6 +63,7 @@ public class FarmTile : MonoBehaviour
             if(playerController.currentTool == PlayerController.ToolType.seeds)
             {
                 PlantCrop(tilePosition);
+                Debug.Log("I did plant a crop");
             }
         
         }
@@ -119,7 +120,7 @@ public class FarmTile : MonoBehaviour
 
         string seedType = inventory.selectedItem;
         string cropType = GetCropFromSeed(seedType);
-
+        int amount = 1;
         if (cropType == null)
         {
             Debug.Log("Invalid seed type!");
@@ -128,7 +129,7 @@ public class FarmTile : MonoBehaviour
 
         if (currentTile == Field && !crops.ContainsKey(tilePosition))
         {
-            if (inventory.RemoveItem(seedType))
+            if (inventory.RemoveItem(seedType, amount))
             {
                 crops[tilePosition] = (cropType, 0, 0);
                 timeSinceLastWatered[tilePosition] = 0f; // Start timer at 0

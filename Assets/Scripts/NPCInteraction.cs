@@ -36,18 +36,18 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && questGiver != null)
-        {
-            if (questGiver.HasActiveQuest())  // Check if the player already has the quest
-            {
-                questGiver.TurnInQuest();  // Turn in the quest if it's completed
-            }
-            else
-            {
-                questGiver.GiveQuest();  // Give the quest if the player doesn't have it
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.F) && questGiver != null)
+    //    {
+    //        if (questGiver.HasActiveQuest())  // Check if the player already has the quest
+    //        {
+    //            questGiver.TurnInQuest();  // Turn in the quest if it's completed
+    //        }
+    //        else
+    //        {
+    //            questGiver.GiveQuest();  // Give the quest if the player doesn't have it
+    //        }
+    //    }
+    //}
 }

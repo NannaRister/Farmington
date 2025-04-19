@@ -14,7 +14,6 @@ public class QuestUI : MonoBehaviour
             Debug.LogError("QuestText reference is missing in QuestUI!");
         }
 
-        // Update the UI at the start
         UpdateUI();
     }
 
@@ -27,55 +26,52 @@ public class QuestUI : MonoBehaviour
     {
         if (questText == null) return;
 
-        questText.text = ""; // Clear existing text
+        questText.text = "";
 
-        // Loop through all active quests
         foreach (Quest quest in QuestManager.Instance.activeQuests)
         {
-            questText.text += $"{quest.questName} - {(quest.isCompleted ? "Completed" : "In Progress")}\n";
-
-            // If quest is not completed, show the required items
-            if (!quest.isCompleted)
-            {
-                foreach (var item in quest.requiredItems)
-                {
-                    // Check how many of the item the player has in their inventory
-                    int playerAmount = PlayerInventory.Instance.HasItem(item.Key, item.Value) ? PlayerInventory.Instance.GetItemAmount(item.Key) : 0;
-                    questText.text += $"{item.Key}: {playerAmount}/{item.Value}\n";
-                }
-            }
-
             if (quest.isCompleted)
             {
-                questText.text = "";
+                continue; // Skip completed quests
             }
+
+            questText.text += $"{quest.questName} - In Progress\n";
+
+            foreach (var item in quest.requiredItems)
+            {
+                int playerAmount = Inventory.Instance.GetItemAmount(item.Key);
+                questText.text += $"{item.Key}: {playerAmount}/{item.Value}\n";
+            }
+
+            questText.text += "\n";
         }
     }
 
     public void CheckQuestProgress()
     {
-        // Loop through all active quests and check progress
         foreach (var quest in QuestManager.Instance.activeQuests)
         {
+            if (quest.isCompleted)
+                continue;
+
             bool isComplete = true;
 
             foreach (var item in quest.requiredItems)
             {
-                if (!PlayerInventory.Instance.HasItem(item.Key, item.Value))
+                if (!Inventory.Instance.HasItem(item.Key, item.Value))
                 {
                     isComplete = false;
                     break;
                 }
             }
 
-            if (isComplete && !quest.isCompleted)
+            if (isComplete)
             {
-                quest.CompleteQuest(); // Mark the quest as complete
+                quest.CompleteQuest();
                 Debug.Log($"{quest.questName} completed!");
             }
         }
 
-        // After checking quest progress, update the UI
         UpdateUI();
     }
 }

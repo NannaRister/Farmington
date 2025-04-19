@@ -12,6 +12,7 @@ public class DialogTrigger2D : MonoBehaviour
     // Reference to QuestGiver
     public QuestGiver questGiver;
     public TMP_Text dialogText;  // UI Text component to show the dialog content
+    NPCInteraction npcInteraction; // Reference to the NPCInteraction script
 
     void Start()
     {
@@ -31,28 +32,33 @@ public class DialogTrigger2D : MonoBehaviour
         }
     }
 
-    private void ToggleDialog()
+   private void ToggleDialog()
+{
+    isDialogOpen = !isDialogOpen;
+    dialogPanel.SetActive(isDialogOpen);
+
+    if (isDialogOpen && questGiver != null)
     {
-        isDialogOpen = !isDialogOpen;
-        dialogPanel.SetActive(isDialogOpen);
+        // Show quest description
+        dialogText.text = questGiver.description;
 
-        if (isDialogOpen && questGiver != null)
+        foreach (Quest quest in QuestManager.Instance.activeQuests)
         {
-            // Show quest description in dialog
-            dialogText.text = questGiver.description;  // Show quest description
-
-            foreach (Quest quest in QuestManager.Instance.activeQuests)
+            if (quest.isCompleted)
             {
-                if (quest.isCompleted)
-                {
-                    dialogText.text = questGiver.description + "\n Completed!";
-                }
+                dialogText.text = questGiver.description + "\n Completed!";
             }
         }
-
-
-
+        if (questGiver.HasActiveQuest())
+        {
+            questGiver.TurnInQuest();
+        }
+        else
+        {
+            questGiver.GiveQuest();
+        }
     }
+}
 
     private void CloseDialog()
     {

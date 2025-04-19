@@ -25,7 +25,7 @@ public class Quest
     {
         foreach (var item in requiredItems)
         {
-            if (!PlayerInventory.Instance.HasItem(item.Key, item.Value))
+            if (!Inventory.Instance.HasItem(item.Key, item.Value))
             {
                 return false; // If any required item is missing, the quest is incomplete
             }
@@ -44,7 +44,7 @@ public class Quest
             // Remove the items from the player's inventory
             foreach (var item in requiredItems)
             {
-                PlayerInventory.Instance.RemoveItem(item.Key, item.Value);
+                Inventory.Instance.RemoveItem(item.Key, item.Value);
             }
         }
         else

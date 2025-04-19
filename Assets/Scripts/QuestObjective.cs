@@ -11,7 +11,7 @@ public class QuestObjective : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Add item to the player's inventory
-            PlayerInventory.Instance.AddItem(itemName, requiredAmount);
+            Inventory.Instance.AddItem(itemName, requiredAmount);
             Debug.Log($"Picked up {requiredAmount} x {itemName}");
 
             // Optionally destroy the object in the world
