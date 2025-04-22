@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.EventSystems; // Add this at the top!
+using UnityEngine.EventSystems;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -96,7 +96,7 @@ public class InventoryUI : MonoBehaviour
                 trigger.triggers.Add(entryEnter);
                 trigger.triggers.Add(entryExit);
 
-                // Add crop selection event to the button
+                //crop selection event to the button
                 Button btnComponent = button.GetComponent<Button>();
                 if (btnComponent != null)
                 {
@@ -121,7 +121,7 @@ public class InventoryUI : MonoBehaviour
     private void OnCropSelected(string selectedCrop)
     {
         Debug.Log($"Selected crop: {selectedCrop}");
-        inventory.selectedItem = selectedCrop;  // Assuming inventory has a way to store the selected item
+        inventory.selectedItem = selectedCrop;
     }
 }
     //TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
