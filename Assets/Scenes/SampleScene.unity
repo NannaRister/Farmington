@@ -42072,7 +42072,7 @@ MonoBehaviour:
   Field: {fileID: 11400000, guid: 08a7e0bc414beba419a24ed78108f84d, type: 2}
   farmTile: {fileID: 11400000, guid: 459778a185cd2cc459441d8d190552a3, type: 2}
   witheredTile: {fileID: 11400000, guid: 203a6ba37108d0b4db6f8a27b52d23b5, type: 2}
-  timeBeforeDeath: 1000
+  timeBeforeDeath: 20
   cropDataList:
   - cropName: Wheat
     growthStages:
