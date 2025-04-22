@@ -85848,6 +85848,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3686458718399811387, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Spacing.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686458718399811387, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686458718399811387, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686458718399811387, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3707957884380033473, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.6999512
@@ -85935,6 +85951,30 @@ PrefabInstance:
     - target: {fileID: 7157877400396386502, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2055412335, guid: fdddfb602e9607e4dbd4f5db0b29b76f, type: 3}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219646503730588122, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8087755569346935918, guid: db4977c25bb54f4408ad1a4e7903a0bd, type: 3}
       propertyPath: m_AnchoredPosition.x
