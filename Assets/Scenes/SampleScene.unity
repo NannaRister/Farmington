@@ -36206,7 +36206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalLight: {fileID: 619394801}
-  dayDurationInMinutes: 0.1667
+  dayDurationInMinutes: 1
   timeOfDay: 0
 --- !u!1 &619994839
 GameObject:
