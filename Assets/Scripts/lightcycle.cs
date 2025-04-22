@@ -8,7 +8,7 @@ public class Lightcycle : MonoBehaviour
 
     [SerializeField]
     //public float dayDurationInMinutes = 24f;
-    public float dayDurationInMinutes = 1f; // 10 sekunder for et helt døgn
+    public float dayDurationInMinutes = 1f; // 1 min for et helt døgn
 
 
     [SerializeField]
